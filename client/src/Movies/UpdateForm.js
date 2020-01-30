@@ -34,7 +34,7 @@ const UpdateForm = props => {
     // make a PUT request to edit the item
     
     axios
-      .put('http://localhost:5000/api/movies/${id}', movie)
+      .put(`http://localhost:5000/api/movies/${id}`, movie)
       .then(res => {
         console.log('Put Success', res);
         props.savedList([res.data]);
