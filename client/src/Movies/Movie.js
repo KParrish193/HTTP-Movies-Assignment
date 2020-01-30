@@ -14,7 +14,7 @@ export default class Movie extends React.Component {
     this.fetchMovie(this.props.match.params.id);
   }
 
-  componentWillReceiveProps(newProps) {
+  componentWillReceibeProps(newProps) {
     if (this.props.match.params.id !== newProps.match.params.id) {
       this.fetchMovie(newProps.match.params.id);
     }
@@ -34,7 +34,7 @@ export default class Movie extends React.Component {
 
   updateMovie = e => {
     e.preventDefault();
-    this.props.history.push(`update-movie/${this.state.movie.id}`)
+    this.props.history.push(`/update-movie/${this.state.movie.id}`)
   }
 
   deleteMovie = e => {
