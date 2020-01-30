@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 const initialMovie = {
-    title: "",
-    director: "",
-    metascore: "",
+    title: '',
+    director: '',
+    metascore: '',
     stars: []
 }
 
