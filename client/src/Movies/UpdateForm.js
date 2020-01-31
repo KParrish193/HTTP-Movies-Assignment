@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Stars from './Stars';
 
 const initialMovie = {
     title: '',
@@ -58,6 +59,9 @@ const UpdateForm = props => {
       <h2>Update Movie</h2>
 
       <form onSubmit={handleSubmit}>
+        <Stars 
+          item={movieInfo.stars}
+        />
         <input
           type="text"
           name="title"
@@ -65,6 +69,7 @@ const UpdateForm = props => {
           placeholder="Title"
           value={movieInfo.title}
         />
+
         <input
           type="text"
           name="director"
@@ -72,6 +77,7 @@ const UpdateForm = props => {
           placeholder="Director"
           value={movieInfo.director}
         />
+
         <input
           type="text"
           name="metascore"
@@ -79,14 +85,7 @@ const UpdateForm = props => {
           placeholder="Score"
           value={movieInfo.metascore}
         />
-        <input
-          type="text"
-          name="stars"
-          onChange={handleChanges}
-          placeholder="Stars, separated by commas ( , )"
-          value={movieInfo.stars}
-        />
-
+      
         <button className="update-form-button">Update</button>
       </form>
     </div>
